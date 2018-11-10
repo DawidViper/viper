@@ -1,0 +1,142 @@
+<!DOCTYPE HTML> <html class="no-js responsivelayout" lang="de"> <head> <script>
+		document.documentElement.className = document.documentElement.className.replace(/no-js/g, 'js');
+	</script> <title>System</title> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="generator" content="Zeta Producer 14.3.3.0, ZP14F, 04.09.2018 12:40:38"> <meta name="robots" content="index, follow"> <script>
+		// if after 1000ms we haven't got webfonts, show the user something, a FOUT is better than nothing
+		// http://kevindew.me/post/47052453532/a-fallback-for-when-google-web-font-loader-fails
+		setTimeout(function() {
+			// you can have the webfont.js cached but still have no classes fire and you will have a window.WebFontConfig object
+			if ( ! ("WebFont" in window)) {
+				// non wfl loader class name because their events could still fire
+				document.getElementsByTagName("html")[0].className += " wf-fail";
+			}
+		}, 1000);
+	
+		WebFontConfig = {
+			google: { families: [ 'Roboto:300,400,700' ] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = "assets/js/webfont/1.5.18/webfont.js";
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})(); 
+	</script> <noscript> <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,700"> </noscript> <link rel="stylesheet" type="text/css" href="assets/bundle.css?v=636774513338032795"> <link rel="stylesheet" type="text/css" href="assets/bundle-print.css?v=636774508845843953" media="print"> <script type="text/javascript" src="assets/bundle.js?v=636774513338032795"></script> <script>
+			function search1(){
+				if (document.forms.searchengine1.q.value.length == 0) {
+					alert("Bitte geben Sie einen Suchbegriff ein.");
+					return false;
+				}
+			}
+		</script> </head> <body id="locus-responsive" class="notouch"> <a id="top"></a> <div id="logo"><a href="index.html"><img src="assets/stock-images/cube.svg" width="110" height="110" alt="index.html"></a></div> <div id="wrapper" class="container"> <div id="header"> <div class="topline"> <div id="webdescription"> <div id="webtext"> <div id="webname"><a href="index.html">Viper</a></div> </div> <div class="clearx"></div> </div> </div> <div id="nav"> <ul data-trianglemode="true" class="submenu touchhovermenu clickhovermenu"> <li class="haschilds"> <a href="index.html">Startseite</a> <ul> <li> <a href="level-2.html">Unterseite</a> </li> </ul> </li> <li> <a href="kontakt.html">Kontakt</a> </li> <li> <a href="impressum.html">Impressum</a> </li> <li class="overflownonly"><a href="#" id="mobilenavtoggle" class="tabletonly toggle" aria-label="Menü ein-/ausblenden">&#9776; Menü</a></li> </ul> </div> </div> <div id="content" class="main style1"> <div class="zparea zpgrid" data-numcolumns="" data-areaname="Standard"> <div class="zpContainer "> <div class="zpRow standard "><div class="zpRowInner"> <div class="zpColumn odd zpColumnWidth1 c12" style=" "> <div class="zpColumnItem"> <div id="a1673" data-articleid="1673" class="articlearea zpwText"> <h1>System</h1> </div> </div> </div> </div></div> </div> </div> </div> <div id="search" class="container"> <script>
+		function getParameterByNamezpsearchform(name) {
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regexS = "[\\?&]" + name + "=([^&#]*)";
+			var regex = new RegExp(regexS);
+			var results = regex.exec(window.location.search);
+			if(results == null) {
+				return "";
+			}
+			else {
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+		}
+		function encode_htmlzpsearchform(astring) { //helps prevent XSS e.g. when printing search strings
+			astring = typeof astring !== 'undefined' ? astring : "";
+
+			astring = astring.replace(/</g, "&lt;");
+			astring = astring.replace(/>/g, "&gt;");
+			astring = astring.replace(/"/g, "&quo" + "t;");
+			astring = astring.replace(/'/g, "&#x27;");
+			astring = astring.replace(/\//g, "&#x2F;");
+			astring = astring.replace(/\[\$/g, "");
+			astring = astring.replace(/\$\]/g, "");
+
+			return astring;
+		}
+		function searchzpsearchform() {
+			var formId = "zpsearchform";
+			if (document.getElementById(formId).q.value == 'Suchbegriff') {
+				return false;
+			}
+			else if ($z.trim(document.getElementById(formId).q.value).length === 0) {
+				alert("Bitte geben Sie einen Suchbegriff ein.");
+				return false;
+			}
+			else{
+				return;
+			}
+		}
+	</script> <form id="zpsearchform" name="searchengine1" onsubmit="return searchzpsearchform()" action="suche.html" method="get" class="zpsearchform"> <input id="zpsearchfield" class="zpsearchfield typetext" type="text" name="q" placeholder="Suchbegriff" aria-label="Suchbegriff"> <input id="zpsearchbutton" class="zpsearchbutton" type="image" name="submit" src="assets/stock-images/magnifier.png" alt="Suchen" aria-label="Suchen"> </form> <script>
+	$(document).ready(function(){
+		// set form field value to searchstring
+		var tmpSearchstring = getParameterByNamezpsearchform("q");
+		if ( tmpSearchstring ){
+			// fill layout searchfield with searchsting
+			document.getElementById("zpsearchform").q.value = tmpSearchstring;
+			// fill search page searchfield with searchsting
+			document.getElementById("zpsearchengine").q2.value = tmpSearchstring;
+			// focus search page searchfield
+			document.getElementById("zpsearchengine").q2.focus();
+		}
+	});
+	</script> </div> </div> <div id="footer" class="container"> <div id="xmenu" class=""> <a href="index.html">Startseite</a> <a href="kontakt.html">Kontakt</a> <a href="impressum.html">Impressum</a> </div> <div id="copyright"> © 2018 Viper. <a href="https://www.zeta-producer.com" class="zp">Website erstellt mit Zeta Producer CMS</a> </div> </div> <script>	
+		function setoverflown(){
+			if ( $z("#nav").is(":hover") || ! $z("#nav > ul > li").length ){
+				return;
+			}
+			if ( $z("#nav:not(.on)").overflown() ){
+				$z("#nav > ul").css("text-align", "left");
+				$z("#nav, #nav > ul li.overflownonly").addClass("overflown");
+				// hide overflown list items
+				var firstTop = $z("#nav > ul > li").eq(0).position().top;
+				$z("#nav > ul > li").each(function(){
+					if ( $z(this).position().top > firstTop ){
+						$z(this).addClass("overflowing");
+					}
+				});
+			}
+			else{
+				$z("#nav > ul").css("text-align", "");
+				$z("#nav, #nav > ul li.overflownonly").removeClass("overflown");
+				// re show previously hidden, overflowing li
+				$z("#nav > ul > li").removeClass("overflowing");
+			}
+		}
+		
+		$z(document).ready(function(){
+			// switches the Mobile Navigation-Menu on/off, when "Menu" link is clicked.
+			$z("a#mobilenavtoggle").on("click", function(e){
+				e.preventDefault();
+				if ( $z("#nav").hasClass("on") ){
+					// we're switching to off now
+					$z("#nav ul li").removeClass("hoverToClickMenuAdded clicked");
+					$z("#nav ul ul").css("display", "").css("visibility", "");
+				}
+				$z("#nav").toggleClass("on");
+			});	
+			
+			setoverflown();
+			var resizeTimeout = null;
+			$z(window).resize(function() {
+				if (resizeTimeout) {
+					clearTimeout(resizeTimeout);
+				}
+				// throttle the resize event
+				resizeTimeout = setTimeout(function () {
+					setoverflown();
+				},150);
+			});
+		});
+		
+		$z(window).load(function(){
+			setoverflown();
+			setTimeout(function(){setoverflown();}, 1000);
+		});
+	</script> 
+<!--
+* Layout: Locus Responsive by StS
+* $Id: default.html 68738 2018-11-09 13:07:55Z sseiz $
+-->
+ </body> </html>
